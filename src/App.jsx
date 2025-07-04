@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Routes } from "react-router-dom";
 import MyNavBar from "./Components/MyNavBar";
+import MyFooter from "./Components/MyFooter";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <main className=" flex-grow-1">
           <Routes></Routes>
         </main>
-        <footer className="w-100"></footer>
+        <footer className="w-100">
+          <MyFooter />
+        </footer>
       </div>
     </BrowserRouter>
   );
