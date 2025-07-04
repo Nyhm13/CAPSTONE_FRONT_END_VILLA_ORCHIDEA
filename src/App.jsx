@@ -15,9 +15,7 @@ function App() {
         <main className=" flex-grow-1">
           <Routes></Routes>
         </main>
-        <footer className="w-100">
-          <MyFooter />
-        </footer>
+        <footer className="w-100"></footer>
       </div>
     </BrowserRouter>
   );
