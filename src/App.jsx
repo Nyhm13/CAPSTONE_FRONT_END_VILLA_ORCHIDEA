@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Routes } from "react-router-dom";
 import MyNavBar from "./Components/MyNavBar";
-import MyFooter from "./Components/MyFooter";
 
 function App() {
   return (
