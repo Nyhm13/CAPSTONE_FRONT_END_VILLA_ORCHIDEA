@@ -1,13 +1,20 @@
+import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 function Ristorante() {
+  useEffect(() => {
+    const carousel = document.querySelector(".animated-carousel");
+    if (carousel) {
+      carousel.classList.add("visible");
+    }
+  }, []);
   return (
     <Container fluid className="p-0 mt-8">
-      <Row className=" justify-content-center">
-        <div className="text-center my-3">
+      <Row className=" justify-content-center ">
+        <div className="text-center my-3 ">
           <img src="/VILLA-ORCHIDEA-266w.webp" alt="logo azienda" />
         </div>
-        <div fluid>
+        <div fluid className="animated-carousel">
           <img
             src="Ristorante esterno.jpg"
             alt="esterno ristorante"
