@@ -1,10 +1,9 @@
-// src/components/Navbar.jsx
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 function MyNavBar() {
   return (
-    <Navbar expand="lg" className="navbar-custom w-100">
+    <Navbar expand="lg" className="navbar-custom w-100  fixed-top mb-5">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" className="text-white fw-bold">
           <img src="/VILLA-ORCHIDEA-266w.webp" alt="logo villa" height={60} />

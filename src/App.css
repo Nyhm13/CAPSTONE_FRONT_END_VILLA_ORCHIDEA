@@ -61,6 +61,85 @@ footer img {
 
 @media (max-width: 576px) {
   .footer-text {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
+}
+
+.mt-8 {
+  margin-top: 5rem !important;
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 5px rgba(235, 193, 6, 0.897);
+}
+.font-playfair {
+  font-family: "Playfair Display";
+}
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.image-wrapper img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+/* effetto per il carosello */
+.animated-carousel {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.animated-carousel.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* cards banner home  */
+.banner-card-sx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  transform: perspective(1000px) rotateY(-10deg);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 4px solid white;
+  border-radius: 5px;
+  background-color: #a67c52;
+}
+.banner-card-dx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  transform: perspective(1000px) rotateY(10deg);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 4px solid white;
+  border-radius: 5px;
+  background-color: #a67c52;
+}
+
+.banner-card:hover {
+  transform: scale(1.05);
+  border-color: #ffd700;
+  z-index: 1;
+}
+
+.golden-border {
+  border: 5px solid #ffd700;
 }
