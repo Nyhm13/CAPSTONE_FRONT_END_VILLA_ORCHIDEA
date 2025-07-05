@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyNavBar from "./Components/MyNavBar";
 import MyFooter from "./Components/MyFooter";
 import HomePage from "./Components/HomePage";
+import Ristorante from "./Components/Ristorante";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <main className=" flex-grow-1">
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
+            <Route path="/ristorante" element={<Ristorante />}></Route>
           </Routes>
         </main>
         <footer className="w-100">

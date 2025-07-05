@@ -15,6 +15,9 @@ function MyNavBar() {
             <Nav.Link as={NavLink} to="/" className="nav-link-custom">
               Home
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/ristorante" className="nav-link-custom">
+              Ristorante
+            </Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/reservations"
