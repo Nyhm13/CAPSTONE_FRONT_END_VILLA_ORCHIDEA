@@ -189,3 +189,18 @@ footer img {
 .gallery-item:hover {
   transform: scale(1.05);
 }
+
+/* css per i modali */
+.bg-brown {
+  background-color: #a67c52;
+}
+
+.btn-azzure {
+  background-color: #00eeff;
+  color: #fff;
+  border: none;
+}
+
+.btn-azzure:hover {
+  background-color: #e6c200;
+}

@@ -28,7 +28,6 @@ function HomePage() {
       </Row>
       {/* carosello part */}
       <Carousel
-        fluid
         data-bs-theme="dark"
         className=" mx-sm-5 mx-md-0 animated-carousel"
         interval={3000}
