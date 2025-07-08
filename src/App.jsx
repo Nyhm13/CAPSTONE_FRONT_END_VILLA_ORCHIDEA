@@ -7,6 +7,7 @@ import MyFooter from "./Components/MyFooter";
 import HomePage from "./Components/HomePage";
 import Ristorante from "./Components/Ristorante";
 import { AuthProvider } from "./Components/AuthContext";
+import Piscina from "./Components/Piscina";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/ristorante" element={<Ristorante />}></Route>
+              <Route path="/piscina" element={<Piscina />}></Route>
             </Routes>
           </main>
           <footer className="w-100">

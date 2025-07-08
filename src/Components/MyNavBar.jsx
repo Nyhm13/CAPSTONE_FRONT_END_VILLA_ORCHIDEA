@@ -6,7 +6,7 @@ import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
 
 function MyNavBar() {
-  const { isAuthenticated, logout } = useContext(AuthContext);
+  const { isAuthenticated, logout, userRole } = useContext(AuthContext);
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
@@ -31,6 +31,14 @@ function MyNavBar() {
               >
                 Ristorante
               </Nav.Link>
+              <Nav.Link as={NavLink} to="/piscina" className="nav-link-custom">
+                Piscina
+              </Nav.Link>
+              {isAuthenticated && userRole === "ADMIN" && (
+                <Nav.Link as={NavLink} to="/admin" className="nav-link-custom">
+                  Admin Panel
+                </Nav.Link>
+              )}
               {isAuthenticated ? (
                 <>
                   <Nav.Link onClick={logout} className="nav-link-custom">

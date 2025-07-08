@@ -8,6 +8,8 @@ const RegisterModal = ({ show, handleClose }) => {
   const [nome, setNome] = useState("");
   const [cognome, setCognome] = useState("");
   const [telefono, setTelefono] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // ✅ stato per mostrare l'errore
+  const [shake, setShake] = useState(false);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -25,22 +27,32 @@ const RegisterModal = ({ show, handleClose }) => {
           telefono,
         }),
       });
-      if (!res.ok) throw new Error("Registrazione fallita");
+      if (!res.ok) {
+        const errorData = await res.json(); // <- ✅ prende il messaggio custom
+        throw new Error(errorData.message); // <- mostra quello che arriva
+      }
       alert("Registrazione completata! controlla la tua email");
       handleClose();
     } catch (err) {
       console.log(err);
-      alert(err.message);
+      // alert(err.message);
+      setErrorMessage(err.message); // ✅ mostra messaggio backend
+      setShake(true);
+      setTimeout(() => setShake(false), 400);
     }
   };
   return (
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton className="bg-brown text text-white border-0">
+    <Modal
+      show={show}
+      onHide={handleClose}
+      className={`${shake ? "shake" : ""} mt-5`}
+    >
+      <Modal.Header closeButton className="bg-brown  border-0">
         <Modal.Title>Registrati</Modal.Title>
       </Modal.Header>
-      <ModalBody className="bg-brown ">
+      <ModalBody>
         <Form onSubmit={handleRegister}>
-          <Form.Group className="mt-3 text-white fw-bold">
+          <Form.Group className="mt-3  fw-bold">
             <Form.Label>Email</Form.Label>
             <Form.Control
               placeholder="mario.rossi@example.it"
@@ -50,7 +62,7 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          <Form.Group className="mt-3 text-white fw-bold">
+          <Form.Group className="mt-3  fw-bold">
             <Form.Label>Username</Form.Label>
             <Form.Control
               placeholder="Cadoronaldigno23"
@@ -60,7 +72,7 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          <Form.Group className="mt-3 text-white fw-bold">
+          <Form.Group className="mt-3  fw-bold">
             <Form.Label>Password</Form.Label>
             <Form.Control
               placeholder="123asd512s"
@@ -70,7 +82,7 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          <Form.Group className="mt-3 text-white fw-bold">
+          <Form.Group className="mt-3  fw-bold">
             <Form.Label>Nome</Form.Label>
             <Form.Control
               placeholder="Mario"
@@ -80,7 +92,7 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          <Form.Group className="mt-3 text-white fw-bold ">
+          <Form.Group className="mt-3  fw-bold ">
             <Form.Label>Cognome</Form.Label>
             <Form.Control
               placeholder="Rossi"
@@ -90,7 +102,7 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          <Form.Group className="mt-3 text-white fw-bold">
+          <Form.Group className="mt-3  fw-bold">
             <Form.Label>Telefono</Form.Label>
             <Form.Control
               placeholder="1234567895"
@@ -100,6 +112,10 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
+          {/* ✅ mostra messaggio di errore se esiste */}
+          {errorMessage && (
+            <div className="text-danger    mt-2">{errorMessage}</div>
+          )}
           <Button type="submit" className="mt-3 btn-azzure">
             Registrati
           </Button>
