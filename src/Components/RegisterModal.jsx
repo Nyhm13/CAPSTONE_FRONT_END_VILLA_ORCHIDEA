@@ -63,7 +63,7 @@ const RegisterModal = ({ show, handleClose }) => {
       onHide={handleCloseModal}
       className={`${shake ? "shake" : ""} mt-5`}
     >
-      <Modal.Header closeButton className="bg-brown  border-0">
+      <Modal.Header closeButton className="bg-brown text-white border-0">
         <Modal.Title>Registrati</Modal.Title>
       </Modal.Header>
       <ModalBody>
