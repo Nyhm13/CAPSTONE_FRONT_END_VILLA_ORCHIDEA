@@ -8,7 +8,7 @@ const RegisterModal = ({ show, handleClose }) => {
   const [nome, setNome] = useState("");
   const [cognome, setCognome] = useState("");
   const [telefono, setTelefono] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // ✅ stato per mostrare l'errore
+  const [errorMessage, setErrorMessage] = useState("");
   const [shake, setShake] = useState(false);
   const [errorField, setErrorField] = useState("");
 
@@ -29,15 +29,15 @@ const RegisterModal = ({ show, handleClose }) => {
         }),
       });
       if (!res.ok) {
-        const errorData = await res.json(); // <- ✅ prende il messaggio custom
-        throw new Error(errorData.message); // <- mostra quello che arriva
+        const errorData = await res.json();
+        throw new Error(errorData.message);
       }
       alert("Registrazione completata! controlla la tua email");
       handleClose();
     } catch (err) {
       console.log(err);
       // alert(err.message);
-      setErrorMessage(err.message); // ✅ mostra messaggio backend
+      setErrorMessage(err.message);
       if (err.message.toLowerCase().includes("email")) {
         setErrorField("email");
       } else if (err.message.toLowerCase().includes("username")) {
@@ -51,7 +51,6 @@ const RegisterModal = ({ show, handleClose }) => {
   };
 
   const handleCloseModal = () => {
-    // ✅ pulisce errori
     setErrorMessage("");
     setErrorField("");
     handleClose();
@@ -152,10 +151,7 @@ const RegisterModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          {/* ✅ mostra messaggio di errore se esiste */}
-          {/* {errorMessage && (
-            <div className="text-danger    mt-2">{errorMessage}</div>
-          )} */}
+
           {errorMessage && !errorField && (
             <div className="text-danger mt-2">{errorMessage}</div>
           )}
