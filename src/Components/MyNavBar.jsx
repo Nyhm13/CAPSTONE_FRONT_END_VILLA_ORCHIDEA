@@ -61,18 +61,6 @@ function MyNavBar() {
                   </Nav.Link>
                 </>
               )}
-              {/* <Nav.Link
-              as={NavLink}
-              to="/reservations"
-              className="nav-link-custom">
-              Prenotazioni
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/profilo" className="nav-link-custom">
-              Profilo
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/login" className="nav-link-custom">
-              Login
-            </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

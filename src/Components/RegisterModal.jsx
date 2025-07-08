@@ -10,6 +10,7 @@ const RegisterModal = ({ show, handleClose }) => {
   const [telefono, setTelefono] = useState("");
   const [errorMessage, setErrorMessage] = useState(""); // ✅ stato per mostrare l'errore
   const [shake, setShake] = useState(false);
+  const [errorField, setErrorField] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -37,14 +38,29 @@ const RegisterModal = ({ show, handleClose }) => {
       console.log(err);
       // alert(err.message);
       setErrorMessage(err.message); // ✅ mostra messaggio backend
+      if (err.message.toLowerCase().includes("email")) {
+        setErrorField("email");
+      } else if (err.message.toLowerCase().includes("username")) {
+        setErrorField("username");
+      } else {
+        setErrorField("");
+      }
       setShake(true);
       setTimeout(() => setShake(false), 400);
     }
   };
+
+  const handleCloseModal = () => {
+    // ✅ pulisce errori
+    setErrorMessage("");
+    setErrorField("");
+    handleClose();
+  };
+
   return (
     <Modal
       show={show}
-      onHide={handleClose}
+      onHide={handleCloseModal}
       className={`${shake ? "shake" : ""} mt-5`}
     >
       <Modal.Header closeButton className="bg-brown  border-0">
@@ -58,9 +74,21 @@ const RegisterModal = ({ show, handleClose }) => {
               placeholder="mario.rossi@example.it"
               type="text"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (errorField === "email") {
+                  setErrorField("");
+                  setErrorMessage("");
+                }
+              }}
+              isInvalid={errorField === "email"}
               required
             />
+            {errorField === "email" && (
+              <Form.Control.Feedback type="invalid">
+                {errorMessage}
+              </Form.Control.Feedback>
+            )}
           </Form.Group>
           <Form.Group className="mt-3  fw-bold">
             <Form.Label>Username</Form.Label>
@@ -68,9 +96,21 @@ const RegisterModal = ({ show, handleClose }) => {
               placeholder="Cadoronaldigno23"
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => {
+                setUsername(e.target.value);
+                if (errorField === "username") {
+                  setErrorField("");
+                  setErrorMessage("");
+                }
+              }}
+              isInvalid={errorField === "username"}
               required
             />
+            {errorField === "username" && (
+              <Form.Control.Feedback type="invalid">
+                {errorMessage}
+              </Form.Control.Feedback>
+            )}
           </Form.Group>
           <Form.Group className="mt-3  fw-bold">
             <Form.Label>Password</Form.Label>
@@ -113,8 +153,11 @@ const RegisterModal = ({ show, handleClose }) => {
             />
           </Form.Group>
           {/* ✅ mostra messaggio di errore se esiste */}
-          {errorMessage && (
+          {/* {errorMessage && (
             <div className="text-danger    mt-2">{errorMessage}</div>
+          )} */}
+          {errorMessage && !errorField && (
+            <div className="text-danger mt-2">{errorMessage}</div>
           )}
           <Button type="submit" className="mt-3 btn-azzure">
             Registrati
