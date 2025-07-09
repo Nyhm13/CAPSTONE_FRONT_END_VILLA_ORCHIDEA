@@ -12,7 +12,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
   const [errorField, setErrorField] = useState("");
   const [shake, setShake] = useState(false);
 
-  // ✅ Aggiorna la disponibilità quando l'utente seleziona la data
+  //  Aggiorna la disponibilità quando l'utente seleziona la data
   const handleDateChange = async (e) => {
     const date = new Date(e.target.value);
     setSelectedDate(date);
@@ -38,7 +38,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
     }
   };
 
-  // ✅ Gestione submit prenotazione
+  //  Gestione submit prenotazione
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage("");
