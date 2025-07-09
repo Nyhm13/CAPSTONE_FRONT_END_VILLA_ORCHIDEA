@@ -8,6 +8,7 @@ import HomePage from "./Components/HomePage";
 import Ristorante from "./Components/Ristorante";
 import { AuthProvider } from "./Components/AuthContext";
 import Piscina from "./Components/Piscina";
+import AdminPanel from "./Components/AdminPanel";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/ristorante" element={<Ristorante />}></Route>
               <Route path="/piscina" element={<Piscina />}></Route>
+              <Route path="/admin" element={<AdminPanel />}></Route>
             </Routes>
           </main>
           <footer className="w-100">

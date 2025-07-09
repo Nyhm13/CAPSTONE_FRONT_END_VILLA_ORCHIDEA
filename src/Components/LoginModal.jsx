@@ -8,7 +8,7 @@ const LoginModal = ({ show, handleClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // ✅ stato per mostrare l'errore
+  const [errorMessage, setErrorMessage] = useState("");
   const [shake, setShake] = useState(false);
 
   const handleLogin = async (e) => {
@@ -31,7 +31,7 @@ const LoginModal = ({ show, handleClose }) => {
       handleClose();
     } catch (err) {
       console.log(err);
-      setErrorMessage(err.message); // ✅ mostra messaggio backend
+      setErrorMessage(err.message);
       setShake(true);
       setTimeout(() => setShake(false), 400);
     }
@@ -78,7 +78,6 @@ const LoginModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-          {/* ✅ mostra messaggio di errore se esiste */}
           {errorMessage && (
             <div className="text-danger    mt-2">{errorMessage}</div>
           )}

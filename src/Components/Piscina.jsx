@@ -1,8 +1,12 @@
-import { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
+import ReservationModal from "./ReservationModal";
+import { AuthContext } from "./AuthContext";
 
 function Piscina() {
+  const { isAuthenticated, token } = useContext(AuthContext);
+  const [showReservationModal, setShowReservationModal] = useState(false);
   const carouselHeight = "639px";
   useEffect(() => {
     const carousel = document.querySelector(".animated-carousel");
@@ -198,6 +202,23 @@ function Piscina() {
             una jacuzi e confortevoli baldrachini. Per maggiori informazioni sui
             prezzi e sulla durata contattate il responsabile della piscina
           </p>
+          {isAuthenticated && (
+            <div className="text-center my-5">
+              <Button
+                className="btn-azzure text-black"
+                onClick={() => setShowReservationModal(true)}
+              >
+                Prenota la tua postazione
+              </Button>
+            </div>
+          )}
+
+          {/* MODALE PRENOTAZIONE */}
+          <ReservationModal
+            show={showReservationModal}
+            handleClose={() => setShowReservationModal(false)}
+            token={token}
+          />
         </Col>
       </Row>
     </Container>
