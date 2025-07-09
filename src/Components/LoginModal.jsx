@@ -78,7 +78,6 @@ const LoginModal = ({ show, handleClose }) => {
               required
             />
           </Form.Group>
-
           {errorMessage && (
             <div className="text-danger    mt-2">{errorMessage}</div>
           )}
