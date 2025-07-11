@@ -171,6 +171,23 @@ footer img {
 .golden-border {
   border: 5px solid #ffd700;
 }
+/*  card prenotazioni  */
+.red-border {
+  border: 5px solid #ff0000;
+}
+
+.scale-card {
+  transition: transform 0.3s ease;
+}
+
+.scale-card:hover {
+  transform: scale(1.05);
+}
+.card-past {
+  background-color: #f0f0f0;
+  opacity: 0.6;
+  pointer-events: none;
+}
 
 /*  galery picture risto */
 

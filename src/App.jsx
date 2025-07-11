@@ -9,11 +9,14 @@ import Ristorante from "./Components/Ristorante";
 import { AuthProvider } from "./Components/AuthContext";
 import Piscina from "./Components/Piscina";
 import AdminPanel from "./Components/AdminPanel";
+import MiePrenotazioni from "./Components/MiePrenotazioni";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <div className=" d-flex flex-column min-vh-100">
           <header className="w-100">
             <MyNavBar />
@@ -24,6 +27,10 @@ function App() {
               <Route path="/ristorante" element={<Ristorante />}></Route>
               <Route path="/piscina" element={<Piscina />}></Route>
               <Route path="/admin" element={<AdminPanel />}></Route>
+              <Route
+                path="/mie-prenotazioni"
+                element={<MiePrenotazioni />}
+              ></Route>
             </Routes>
           </main>
           <footer className="w-100">
