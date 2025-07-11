@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 function MyFooter() {
   return (
-    <Container fluid className=" bg-brown">
+    <Container fluid className=" bg-brown mt-5">
       <Row className=" text-center d-flex row-cols-3">
         <Col>
           <p className=" fw-bold mt-3 mb-0 ">
@@ -29,7 +29,7 @@ function MyFooter() {
               <p className="m-0 footer-text">Instagram</p>
             </a>
           </div>
-          <div className="d-flex justify-content-center align-items-center">
+          {/* <div className="d-flex justify-content-center align-items-center">
             <a
               href="https://www.agriturismovillaorchidea.it/?_gl=1*1bo21pb*_up*MQ..*_ga*Mzc1OTA1MDgyLjE3NTE1NjYzMDI.*_ga_23LNSPS7Q6*czE3NTE2NTQyOTgkbzQkZzEkdDE3NTE2NTQzMDIkajU2JGwwJGgw"
               className="text-white me-3 d-flex justify-content-center align-items-center gap-1 text-start"
@@ -38,7 +38,7 @@ function MyFooter() {
               <i className="bi bi-globe fs-4 text-center"></i>
               <p className="m-0 text-nowrap footer-text">Sito Ufficiale</p>
             </a>
-          </div>
+          </div> */}
         </Col>
         <Col>
           <p className=" fw-bold mt-3 mb-0 text-nowrap">

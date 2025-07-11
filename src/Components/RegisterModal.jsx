@@ -144,7 +144,7 @@ const RegisterModal = ({ show, handleClose }) => {
           <Form.Group className="mt-3  fw-bold">
             <Form.Label>Telefono</Form.Label>
             <Form.Control
-              placeholder="1234567895"
+              placeholder="+39 3450502908"
               type="text"
               value={telefono}
               onChange={(e) => setTelefono(e.target.value)}

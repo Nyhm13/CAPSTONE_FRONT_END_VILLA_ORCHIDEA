@@ -34,11 +34,21 @@ function MyNavBar() {
               <Nav.Link as={NavLink} to="/piscina" className="nav-link-custom">
                 Piscina
               </Nav.Link>
+              {isAuthenticated && (
+                <Nav.Link
+                  as={NavLink}
+                  to="/mie-prenotazioni"
+                  className="nav-link-custom"
+                >
+                  Le Tue Prenotazioni
+                </Nav.Link>
+              )}
               {isAuthenticated && userRole === "ADMIN" && (
                 <Nav.Link as={NavLink} to="/admin" className="nav-link-custom">
                   Admin Panel
                 </Nav.Link>
               )}
+
               {isAuthenticated ? (
                 <>
                   <Nav.Link onClick={logout} className="nav-link-custom">
