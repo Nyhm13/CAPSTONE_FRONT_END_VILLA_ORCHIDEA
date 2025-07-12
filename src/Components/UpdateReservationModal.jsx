@@ -200,7 +200,7 @@ const UpdateReservationModal = ({
 
           {/* Note */}
           <Form.Group className="mb-3">
-            <Form.Label>Note</Form.Label>
+            <Form.Label>📝Note</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
