@@ -31,7 +31,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
       if (!res.ok) throw new Error("Impossibile recuperare la disponibilità");
       const data = await res.json();
       setAvailability(data);
-      console.log(availability);
+      // console.log(availability);
     } catch (err) {
       console.error(err);
       setAvailability(null);

@@ -69,7 +69,7 @@ const UpdateReservationModal = ({
       if (!res.ok) throw new Error("Errore caricamento disponibilità");
       const data = await res.json();
       setAvailability(data);
-      console.log("disponibilita di posti ", data);
+      // console.log("disponibilita di posti ", data);
     } catch (err) {
       console.error(err);
     }

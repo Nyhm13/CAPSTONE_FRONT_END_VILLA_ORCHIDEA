@@ -24,10 +24,10 @@ const LoginModal = ({ show, handleClose }) => {
         const errorData = await res.json();
         throw new Error(errorData.message);
       }
-      console.log(res);
+      // console.log(res);
       const token = await res.text();
       login(token);
-      console.log(token);
+      // console.log(token);
       handleClose();
     } catch (err) {
       console.log(err);

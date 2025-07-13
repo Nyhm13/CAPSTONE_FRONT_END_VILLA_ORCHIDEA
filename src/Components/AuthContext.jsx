@@ -14,10 +14,10 @@ export const AuthProvider = ({ children }) => {
       setToken(savedToken);
       const decoded = jwtDecode(savedToken);
       setUserRole(decoded.ruolo);
-      console.log(
-        "ruolo utentente recuperato dal localStorage token:",
-        decoded.ruolo
-      );
+      // console.log(
+      //   "ruolo utentente recuperato dal localStorage token:",
+      //   decoded.ruolo
+      // );
     }
   }, []);
 
@@ -26,14 +26,14 @@ export const AuthProvider = ({ children }) => {
     setToken(token);
     const decoded = jwtDecode(token);
     setUserRole(decoded.ruolo);
-    console.log("ruolo utente dopo il login", decoded.ruolo);
+    // console.log("ruolo utente dopo il login", decoded.ruolo);
   };
 
   const logout = () => {
     localStorage.removeItem("token");
     setToken(null);
     setUserRole(null);
-    console.log("utente sloggato");
+    // console.log("utente sloggato");
   };
 
   const isAuthenticated = !!token;
