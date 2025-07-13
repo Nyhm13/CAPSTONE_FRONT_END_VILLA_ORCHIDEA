@@ -183,6 +183,9 @@ const UpdateProfileModal = ({ show, handleClose, token }) => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <small>
+              Rimetti la tua password corrente se non desideri cambiarla
+            </small>
           </Form.Group>
 
           {errorMessage && !errorField && (
