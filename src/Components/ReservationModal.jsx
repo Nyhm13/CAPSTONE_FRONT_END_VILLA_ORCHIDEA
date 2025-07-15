@@ -31,7 +31,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
       if (!res.ok) throw new Error("Impossibile recuperare la disponibilità");
       const data = await res.json();
       setAvailability(data);
-      console.log(availability);
+      // console.log(availability);
     } catch (err) {
       console.error(err);
       setAvailability(null);
@@ -96,7 +96,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
         <Form onSubmit={handleSubmit}>
           {/* Campo data */}
           <Form.Group className="mb-3">
-            <Form.Label>Data prenotazione</Form.Label>
+            <Form.Label>📅Data prenotazione</Form.Label>
             <Form.Control
               type="date"
               value={
@@ -115,7 +115,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
           {availability && (
             <div className="mb-3">
               <p>
-                <strong>Posti disponibili:</strong>
+                <strong>👥Posti disponibili:</strong>
               </p>
               <ul>
                 <li>FULLDAY: {availability.FULLDAY}</li>
@@ -127,7 +127,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
 
           {/* Fascia oraria */}
           <Form.Group className="mb-3">
-            <Form.Label>Fascia oraria</Form.Label>
+            <Form.Label>🕘Fascia oraria</Form.Label>
             <Form.Select
               value={selectedFascia}
               onChange={(e) => setSelectedFascia(e.target.value)}
@@ -142,8 +142,9 @@ const ReservationModal = ({ show, handleClose, token }) => {
 
           {/* Numero posti */}
           <Form.Group className="mb-3">
-            <Form.Label>Numero posti</Form.Label>
+            <Form.Label>👥 Numero posti</Form.Label>
             <Form.Control
+              placeholder="es: 1"
               type="number"
               value={numeroPosti}
               onChange={(e) => {
@@ -164,7 +165,7 @@ const ReservationModal = ({ show, handleClose, token }) => {
 
           {/* Note */}
           <Form.Group className="mb-3">
-            <Form.Label>Note</Form.Label>
+            <Form.Label>📝Note</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}

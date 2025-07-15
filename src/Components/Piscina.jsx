@@ -11,7 +11,10 @@ function Piscina() {
   useEffect(() => {
     const carousel = document.querySelector(".animated-carousel");
     if (carousel) {
-      carousel.classList.add("visible");
+      carousel.classList.remove("visible");
+      setTimeout(() => {
+        carousel.classList.add("visible");
+      }, 50);
     }
   }, []);
   return (
@@ -34,7 +37,7 @@ function Piscina() {
       <Carousel
         data-bs-theme="dark"
         className=" mx-sm-5 mx-md-0 animated-carousel"
-        interval={3000}
+        interval={2000}
       >
         <Carousel.Item>
           <img

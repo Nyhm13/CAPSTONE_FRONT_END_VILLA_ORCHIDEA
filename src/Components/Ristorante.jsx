@@ -5,7 +5,10 @@ function Ristorante() {
   useEffect(() => {
     const carousel = document.querySelector(".animated-carousel");
     if (carousel) {
-      carousel.classList.add("visible");
+      carousel.classList.remove("visible");
+      setTimeout(() => {
+        carousel.classList.add("visible");
+      }, 50);
     }
   }, []);
   return (

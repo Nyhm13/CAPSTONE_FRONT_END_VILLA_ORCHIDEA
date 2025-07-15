@@ -7,7 +7,10 @@ function HomePage() {
   useEffect(() => {
     const carousel = document.querySelector(".animated-carousel");
     if (carousel) {
-      carousel.classList.add("visible");
+      carousel.classList.remove("visible");
+      setTimeout(() => {
+        carousel.classList.add("visible");
+      }, 50);
     }
   }, []);
   return (
@@ -166,7 +169,7 @@ function HomePage() {
             <div className=" golden-border">
               <img
                 src="/Tavola apparecchiata.jpg"
-                alt="Villa Orchidea"
+                alt="Tavola apparecchiata"
                 className="img-fluid"
                 style={{
                   width: "450px",
