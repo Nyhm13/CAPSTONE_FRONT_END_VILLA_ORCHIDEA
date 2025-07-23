@@ -135,8 +135,8 @@ const ReservationModal = ({ show, handleClose, token }) => {
             >
               <option value="">-- Seleziona fascia --</option>
               <option value="FULLDAY">Full Day</option>
-              <option value="MORNING">Mattina</option>
-              <option value="AFTERNOON">Pomeriggio</option>
+              <option value="MORNING">Morning</option>
+              <option value="AFTERNOON">Afternoon</option>
             </Form.Select>
           </Form.Group>
 
