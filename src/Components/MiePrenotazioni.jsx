@@ -83,7 +83,7 @@ function MiePrenotazioni() {
       {reservations.length === 0 ? (
         <p className="text-center">Nessuna prenotazione trovata.</p>
       ) : (
-        <Row className="g-4 justify-content-around">
+        <Row className="g-4  justify-content-center">
           {reservations.map((r) => {
             const isPast = new Date(r.dataPrenotazione) < new Date();
             return (

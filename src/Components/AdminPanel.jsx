@@ -155,50 +155,52 @@ const AdminPanel = () => {
                 </Card.Body>
               </Card>
             ))}
-            <h5 className="mt-5 mb-3">Prenotazioni del Giorno - Lista</h5>
-            <Button
-              variant="secondary"
-              className="mb-4"
-              onClick={() => window.print()}
-            >
-              Stampa Lista
-            </Button>
-            {availability && (
-              <Row className="mt-2 justify-content-start">
-                <Col md={8}>
-                  <h5>Disponibilità Rimanente</h5>
-                  <ul className=" d-flex gap-5">
-                    <li>FULLDAY: {availability.FULLDAY}</li>
-                    <li>MORNING: {availability.MORNING}</li>
-                    <li>AFTERNOON: {availability.AFTERNOON}</li>
-                  </ul>
-                </Col>
-              </Row>
-            )}
-            <table className="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Nome</th>
-                  <th>Cognome</th>
-                  <th>Data</th>
-                  <th>Fascia</th>
-                  <th>Posti</th>
-                  <th>Note</th>
-                </tr>
-              </thead>
-              <tbody>
-                {reservations.map((r) => (
-                  <tr key={r.id}>
-                    <td>{r.user?.nome}</td>
-                    <td>{r.user?.cognome}</td>
-                    <td>{r.dataPrenotazione}</td>
-                    <td>{r.fasciaOraria}</td>
-                    <td>{r.numeroPosti}</td>
-                    <td>{r.note || "-"}</td>
+            <div className="print-area">
+              <h5 className="mt-5 mb-3">Prenotazioni del Giorno - Lista</h5>
+              <Button
+                variant="secondary"
+                className="mb-4"
+                onClick={() => window.print()}
+              >
+                Stampa Lista
+              </Button>
+              {availability && (
+                <Row className="mt-2 justify-content-start">
+                  <Col md={8}>
+                    <h5>Disponibilità Rimanente</h5>
+                    <ul className=" d-flex gap-5">
+                      <li>FULLDAY: {availability.FULLDAY}</li>
+                      <li>MORNING: {availability.MORNING}</li>
+                      <li>AFTERNOON: {availability.AFTERNOON}</li>
+                    </ul>
+                  </Col>
+                </Row>
+              )}
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Data</th>
+                    <th>Fascia</th>
+                    <th>Posti</th>
+                    <th>Note</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {reservations.map((r) => (
+                    <tr key={r.id}>
+                      <td>{r.user?.nome}</td>
+                      <td>{r.user?.cognome}</td>
+                      <td>{r.dataPrenotazione}</td>
+                      <td>{r.fasciaOraria}</td>
+                      <td>{r.numeroPosti}</td>
+                      <td>{r.note || "-"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </Col>
         </Row>
       )}

@@ -186,7 +186,7 @@ function Piscina() {
               <img
                 src="jacuzzi.jpg"
                 alt="Villa Orchidea"
-                className="img-fluid"
+                className="img-fluid object-fit-cover"
                 style={{
                   width: "450px",
                   height: "400px",

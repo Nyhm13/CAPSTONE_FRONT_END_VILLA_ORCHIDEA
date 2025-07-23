@@ -92,7 +92,7 @@ const RegisterModal = ({ show, handleClose }) => {
           <Form.Group className="mt-3  fw-bold">
             <Form.Label>Username</Form.Label>
             <Form.Control
-              placeholder="Cadoronaldigno23"
+              placeholder="MarioRossi123"
               type="text"
               value={username}
               onChange={(e) => {
