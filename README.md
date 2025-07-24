@@ -60,7 +60,7 @@ Registra un nuovo account, fai login, prova le prenotazioni.
 ✅ Utente
 1.Registrazione e login
 2.Visualizza disponibilità posti per data e fascia oraria
-3.Crea e puo avere 1 prenotazione per giorno tranne il lunedi e solo per i giorni compresi tra il 20 giugno e 15 settembre, modifica, cancella prenotazioni
+3.Crea e puo avere 1 prenotazione per giorno tranne il lunedi(giorno di chiusura) e solo per i giorni compresi tra il 20 giugno e 15 settembre, modifica, cancella prenotazioni
 4.Aggiorna profilo utente
 
 ✅ Admin
