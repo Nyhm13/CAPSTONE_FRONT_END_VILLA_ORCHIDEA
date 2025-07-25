@@ -68,6 +68,7 @@ Registra un nuovo account, fai login, prova le prenotazioni.
 2.Visualizza disponibilità posti per data e fascia oraria
 3.Crea e puo avere 1 prenotazione per giorno tranne il lunedi e solo per i giorni compresi tra il 20 giugno e 15 settembre (periodo stagione in cui la piscina e  aperta), modifica, cancella prenotazioni
 4.Aggiorna profilo utente
+5. L`utente riceve un email alla registrazione, alla creazione/modifica/cancellazione di una prenotazione con tutte le informazioni utili riguardo le varie operazioni di registrazione, creazione,modifica e cancellazione
 
 ✅ Admin
 1.Vede tutte le prenotazioni per data selezionata
