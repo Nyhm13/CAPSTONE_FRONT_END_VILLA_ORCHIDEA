@@ -80,3 +80,11 @@ Le rotte protette richiedono token JWT.
 
 📌 Suggerimenti
 ✅ In produzione configura CORS e variabili .env in modo sicuro.
+
+
+![HomePagePiscina](https://github.com/user-attachments/assets/c5a86f7a-a2c5-4f07-aa9d-327dcabda31f)
+<img width="1920" height="1040" alt="HomePagePiscina 2" src="https://github.com/user-attachments/assets/d188ff04-a441-4d62-b354-5f913ce59461" />
+
+
+
+
