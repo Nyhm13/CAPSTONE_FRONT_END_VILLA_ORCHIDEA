@@ -84,7 +84,7 @@ Le rotte protette richiedono token JWT.
 ### Homepage
 ![HomePagePiscina](https://github.com/user-attachments/assets/c5a86f7a-a2c5-4f07-aa9d-327dcabda31f)
 ### Homepage mid section
-<img width="1920" height="1040" alt="HomePagePiscina 2" src="https://github.com/user-attachments/assets/d188ff04-a441-4d62-b354-5f913ce59461" />
+![HomePagePiscinaMidSection]( https://github.com/user-attachments/assets/d188ff04-a441-4d62-b354-5f913ce59461)
 ### Homepage post log in che sblocca il tasto prenota la tua postazione 
 <img width="1920" height="1040" alt="HomePagePiscina Dopo Login" src="https://github.com/user-attachments/assets/db59fd30-e8ba-476f-9b8b-ee645df4dc57" />
 ### Modale Login in 
