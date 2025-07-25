@@ -81,10 +81,27 @@ Le rotte protette richiedono token JWT.
 📌 Suggerimenti
 ✅ In produzione configura CORS e variabili .env in modo sicuro.
 
-
+### Homepage
 ![HomePagePiscina](https://github.com/user-attachments/assets/c5a86f7a-a2c5-4f07-aa9d-327dcabda31f)
+### Homepage mid section
 <img width="1920" height="1040" alt="HomePagePiscina 2" src="https://github.com/user-attachments/assets/d188ff04-a441-4d62-b354-5f913ce59461" />
+### Homepage post log in che sblocca il tasto prenota la tua postazione 
+<img width="1920" height="1040" alt="HomePagePiscina Dopo Login" src="https://github.com/user-attachments/assets/db59fd30-e8ba-476f-9b8b-ee645df4dc57" />
+### Modale Login in 
+<img width="1920" height="1040" alt="Modale Registrazione Utente" src="https://github.com/user-attachments/assets/9df5adae-0208-464d-a159-7bf3ce7b2eb1" />
+### Modale Crea Prenotazione 
+<img width="1920" height="1040" alt="Modale Prenotazione" src="https://github.com/user-attachments/assets/9fcba3dc-b1af-4d0f-a4f7-955ce7dfeb00" />
+### Area Riservata Con le prenotazioni per chi e loggato 
 
+<img width="1920" height="1040" alt="Area Riservata Utente" src="https://github.com/user-attachments/assets/49db23e1-fe74-4814-bfc3-13b002d76122" />
+### Modale modifica prenotazione
+
+<img width="1920" height="1040" alt="Modale Modifica Prenotazione" src="https://github.com/user-attachments/assets/d7bde1b8-19bc-4cde-80a8-ba49086bdd43" />
+
+### Modale modifica dati user per user 
+<img width="1920" height="1040" alt="Modale Modifica Dati User" src="https://github.com/user-attachments/assets/8cf6a381-3d87-4f31-bd0b-9e9307a0d6de" />
+### Area Riservata ad admin dove filtra per data le prenotazioni 
+<img width="1920" height="1040" alt="Area Riservata Admin" src="https://github.com/user-attachments/assets/aac0f169-55d4-4837-9e57-0ea59bd87ef0" />
 
 
 
