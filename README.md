@@ -35,6 +35,12 @@ spring.datasource.username=TUO_USER_DB
 spring.datasource.password=TUO_PASSWORD_DB
 
 Assicurati di creare anche un file env.properties per usufruire del invio delle email alla creazione user,prenotazione,modifica e delete delle prenotazioni
+In env.properties crea postgresql.password=LA TUA PASSWORD DB
+gmail.password= LA TUA PASSWORD DI GMAIL PER AUTOMATIZZARE LE EMAIL
+gmail.from= IL TUO INDIRIZZO EMAIL
+
+
+
 
 Verifica:
 
@@ -58,9 +64,9 @@ Registra un nuovo account, fai login, prova le prenotazioni.
 
 📌 Funzionalità principali
 ✅ Utente
-1.Registrazione e login
+1.Registrazione e login, Blocca la registrazione qual'ora esisti gia nel db un username o email inseriti , blocca la registrazione qual'ora il cliente non inserisce un numero di telefono valido e che non inizi con un prefisso tipo +39 
 2.Visualizza disponibilità posti per data e fascia oraria
-3.Crea e puo avere 1 prenotazione per giorno tranne il lunedi(giorno di chiusura) e solo per i giorni compresi tra il 20 giugno e 15 settembre, modifica, cancella prenotazioni
+3.Crea e puo avere 1 prenotazione per giorno tranne il lunedi e solo per i giorni compresi tra il 20 giugno e 15 settembre (periodo stagione in cui la piscina e  aperta), modifica, cancella prenotazioni
 4.Aggiorna profilo utente
 
 ✅ Admin
